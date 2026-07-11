@@ -1,36 +1,83 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# CAIQUE OS
 
-## Getting Started
+Portfólio pessoal de **Caique Brandão** — Software Engineer, Full Stack Developer e Systems Analyst — construído como se fosse a interface de um sistema operacional, não um site tradicional.
 
-First, run the development server:
+🔗 **Live:** _em breve_
+📦 **Stack:** Next.js · TypeScript · Tailwind CSS v4 · Motion
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+---
+
+## Sobre o projeto
+
+Em vez de uma landing page comum, o CAIQUE OS apresenta informações profissionais (identidade, competências, projetos, histórico e experimentos com IA) como módulos de um sistema: registros de dados, logs de atividade, status em tempo real e um núcleo visual inspirado em um horizonte de eventos.
+
+O objetivo é comunicar, através da própria interface, competência técnica, organização e atenção ao detalhe — não só descrever isso em texto.
+
+## Stack
+
+| Camada | Tecnologia |
+|---|---|
+| Framework | [Next.js](https://nextjs.org/) (App Router) |
+| Linguagem | TypeScript |
+| Estilos | Tailwind CSS v4 |
+| Animações | [Motion](https://motion.dev/) (`motion/react`) |
+| Ícones | Lucide React, React Icons |
+| Deploy | Vercel |
+
+## Estrutura do projeto
+
+```
+src/
+├── app/                 # rotas e layout raiz (App Router)
+├── components/
+│   ├── layout/          # header, footer, wrappers de página
+│   ├── projects/        # cards e janelas de projeto
+│   ├── sections/        # seções da home (hero, identity, capabilities...)
+│   ├── system/          # peças de "sistema" (status bar, background grid)
+│   └── ui/              # componentes reutilizáveis (botões, live-role...)
+├── data/                 # conteúdo estático tipado (projetos, módulos, etc.)
+├── hooks/                # hooks compartilhados
+├── lib/                  # utilitários
+├── styles/               # tokens e estilos globais
+└── types/                 # tipos compartilhados
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Rodando localmente
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```bash
+# clonar o repositório
+git clone https://github.com/SEU-USUARIO/caique-os.git
+cd caique-os
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+# instalar dependências
+npm install
 
-## Learn More
+# ambiente de desenvolvimento
+npm run dev
+```
 
-To learn more about Next.js, take a look at the following resources:
+Acesse [http://localhost:3000](http://localhost:3000).
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### Build de produção
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+```bash
+npm run build
+npm run start
+```
 
-## Deploy on Vercel
+## Seções
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- **Identity** — perfil, disponibilidade e áreas de foco atuais
+- **Capabilities** — competências técnicas organizadas por módulo
+- **Projects** — projetos selecionados, com stack e status
+- **Activity Log** — histórico cronológico de entregas
+- **AI Lab** — integrações e experimentos com IA
+- **Contact** — canais de contato direto
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Deploy
+
+O projeto é hospedado na [Vercel](https://vercel.com), com deploy automático a cada push na branch `main`.
+
+## Licença
+
+Uso pessoal — Caique Brandão © 2026.
