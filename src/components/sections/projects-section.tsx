@@ -43,7 +43,7 @@ const projects = [
   stack: ["Next.js", "TypeScript", "PostgreSQL", "Vercel"],
   status: "COMPLETED",
   github: "https://github.com/brandaoca44/sortelab",
-  deploy: "#",
+  deploy: "https://sortelab.vercel.app/",
 },
 ];
 

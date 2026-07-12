@@ -46,7 +46,7 @@ export function AILabSection() {
           viewport={{ once: true }}
         >
           <p className="font-mono text-[11px] tracking-[0.3em] text-[var(--accent)]">
-            MODULE 05
+            MODULE 04
           </p>
 
           <h2 className="mt-3 text-3xl font-semibold sm:text-4xl">
