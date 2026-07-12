@@ -344,7 +344,7 @@ export function HeroSection() {
             </span>
 
             <span className="mt-2 font-mono text-[8px] text-[var(--text-muted)] sm:text-[9px]">
-              SALVADOR • BRAZIL
+              SANTO ESTEVÃO • BRAZIL
             </span>
 
             <div className="mt-2 flex items-center gap-2">
