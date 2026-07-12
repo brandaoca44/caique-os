@@ -78,6 +78,8 @@ npm run start
 
 O projeto é hospedado na [Vercel](https://vercel.com), com deploy automático a cada push na branch `main`.
 
+O Projeto já está no ar, clicando aqui [Digital Identity](https://caique-os.vercel.app), você irá ver ele finalizado.
+
 ## Licença
 
 Uso pessoal — Caique Brandão © 2026.
