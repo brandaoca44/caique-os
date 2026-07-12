@@ -54,7 +54,7 @@ export function ContactSection() {
           viewport={{ once: true }}
         >
           <p className="font-mono text-[11px] tracking-[0.3em] text-[var(--accent)]">
-            MODULE 05
+            MODULE 06
           </p>
 
           <h2 className="mt-3 text-4xl font-semibold">
