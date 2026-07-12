@@ -1,0 +1,25 @@
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  viewBox="0 0 64 64"
+  role="img"
+  aria-label="CB"
+>
+  <rect width="64" height="64" rx="15" fill="#05070D"/>
+
+  <path
+    d="M31 17C22.7 17 17 22.7 17 32C17 41.3 22.7 47 31 47C35.2 47 38.5 45.7 41 43.5"
+    fill="none"
+    stroke="#F8FAFC"
+    stroke-width="5"
+    stroke-linecap="round"
+  />
+
+  <path
+    d="M34 17V47M34 18H42C46.2 18 49 20.8 49 24.5C49 27.5 47.2 29.8 44.4 30.7C47.9 31.5 50 34.2 50 37.7C50 42.9 46.2 46 41 46H34"
+    fill="none"
+    stroke="#F8FAFC"
+    stroke-width="5"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+  />
+</svg>

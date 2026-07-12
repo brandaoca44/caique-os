@@ -2,13 +2,15 @@
 
 import { motion } from "motion/react";
 import {
-  Github,
-  Linkedin,
   Mail,
   MessageCircle,
   Send,
 } from "lucide-react";
-import { FaGithub, FaLinkedin } from "react-icons/fa";
+
+import {
+  FaGithub,
+  FaLinkedin,
+} from "react-icons/fa";
 
 const contacts = [
   {

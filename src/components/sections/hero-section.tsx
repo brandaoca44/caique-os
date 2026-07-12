@@ -5,6 +5,15 @@ import { ArrowRight, Download } from "lucide-react";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 import { LiveRole } from "@/components/ui/live-role";
 
+const particles = [
+  { x: "-42%", y: "-12%", size: 3, duration: 8 },
+  { x: "38%", y: "-24%", size: 2, duration: 10 },
+  { x: "-34%", y: "28%", size: 2, duration: 9 },
+  { x: "43%", y: "18%", size: 3, duration: 11 },
+  { x: "-12%", y: "-43%", size: 2, duration: 7 },
+  { x: "15%", y: "42%", size: 2, duration: 12 },
+];
+
 export function HeroSection() {
   return (
     <section
@@ -91,7 +100,6 @@ export function HeroSection() {
           </div>
         </motion.div>
 
-        
         <motion.div
           initial={{ opacity: 0, scale: 0.9 }}
           animate={{ opacity: 1, scale: 1 }}
@@ -101,73 +109,137 @@ export function HeroSection() {
         >
           <motion.div
             animate={{
-              opacity: [0.14, 0.28, 0.14],
-              scale: [0.92, 1.08, 0.92],
+              opacity: [0.13, 0.3, 0.13],
+              scale: [0.9, 1.12, 0.9],
             }}
             transition={{
-              duration: 4,
+              duration: 4.8,
               repeat: Infinity,
               ease: "easeInOut",
             }}
-            className="absolute h-40 w-40 rounded-full bg-[var(--primary)] blur-[70px] sm:h-52 sm:w-52 sm:blur-[90px] lg:h-64 lg:w-64 lg:blur-[100px]"
+            className="absolute h-[58%] w-[58%] rounded-full bg-[var(--primary)] blur-[90px]"
           />
 
           <motion.div
             animate={{
-              opacity: [0.06, 0.16, 0.06],
-              scale: [1, 1.12, 1],
+              opacity: [0.06, 0.18, 0.06],
+              scale: [1, 1.15, 1],
             }}
             transition={{
-              duration: 3.2,
+              duration: 3.4,
               repeat: Infinity,
               ease: "easeInOut",
             }}
-            className="absolute h-28 w-28 rounded-full bg-[var(--accent)] blur-[60px] sm:h-36 sm:w-36 sm:blur-[75px] lg:h-44 lg:w-44 lg:blur-[90px]"
+            className="absolute h-[42%] w-[42%] rounded-full bg-[var(--accent)] blur-[80px]"
           />
 
-          
+          {particles.map((particle, index) => (
+            <motion.span
+              key={`${particle.x}-${particle.y}`}
+              className="absolute z-30 rounded-full bg-white"
+              style={{
+                left: `calc(50% + ${particle.x})`,
+                top: `calc(50% + ${particle.y})`,
+                width: particle.size,
+                height: particle.size,
+                boxShadow: "0 0 8px rgba(255,255,255,0.8)",
+              }}
+              animate={{
+                rotate: 360,
+                opacity: [0.15, 0.9, 0.15],
+                scale: [0.7, 1.3, 0.7],
+              }}
+              transition={{
+                rotate: {
+                  duration: particle.duration,
+                  repeat: Infinity,
+                  ease: "linear",
+                },
+                opacity: {
+                  duration: 2.4,
+                  repeat: Infinity,
+                  delay: index * 0.2,
+                },
+                scale: {
+                  duration: 2.4,
+                  repeat: Infinity,
+                  delay: index * 0.2,
+                },
+              }}
+            />
+          ))}
+
           <div
             className="absolute inset-0 flex items-center justify-center"
-            style={{ perspective: "900px" }}
+            style={{ perspective: "1000px" }}
           >
             <div
-              className="relative"
+              className="relative h-[76%] w-[76%]"
               style={{
-                width: "74%",
-                height: "74%",
-                transform: "rotateX(78deg)",
+                transform: "rotateX(77deg) rotateZ(-7deg)",
                 transformStyle: "preserve-3d",
               }}
             >
               <motion.div
                 animate={{ rotate: 360 }}
                 transition={{
-                  duration: 9,
+                  duration: 12,
                   repeat: Infinity,
                   ease: "linear",
                 }}
-                className="h-full w-full rounded-full"
+                className="absolute inset-0 rounded-full"
                 style={{
                   background:
-                    "conic-gradient(from 0deg, transparent 0deg, var(--accent) 35deg, var(--primary) 110deg, transparent 190deg, transparent 250deg, var(--accent) 310deg, transparent 360deg)",
-                  filter: "blur(3px)",
-                  opacity: 0.9,
+                    "conic-gradient(from 20deg, transparent 0deg, rgba(34,211,238,0.2) 22deg, rgba(255,255,255,0.95) 48deg, var(--accent) 72deg, var(--primary) 135deg, transparent 195deg, rgba(139,92,246,0.7) 254deg, rgba(255,255,255,0.65) 302deg, transparent 360deg)",
+                  filter: "blur(2px)",
+                  opacity: 0.95,
+                }}
+              />
+
+              <motion.div
+                animate={{ rotate: -360 }}
+                transition={{
+                  duration: 7,
+                  repeat: Infinity,
+                  ease: "linear",
+                }}
+                className="absolute inset-[7%] rounded-full"
+                style={{
+                  background:
+                    "conic-gradient(from 180deg, transparent 0deg, rgba(139,92,246,0.8) 45deg, rgba(34,211,238,0.95) 95deg, rgba(255,255,255,0.8) 135deg, transparent 210deg, rgba(139,92,246,0.6) 290deg, transparent 360deg)",
+                  filter: "blur(5px)",
+                  opacity: 0.75,
+                }}
+              />
+
+              <motion.div
+                animate={{ rotate: 360 }}
+                transition={{
+                  duration: 18,
+                  repeat: Infinity,
+                  ease: "linear",
+                }}
+                className="absolute inset-[14%] rounded-full"
+                style={{
+                  background:
+                    "conic-gradient(from 80deg, transparent, rgba(255,255,255,0.8), var(--accent), transparent 45%, var(--primary), transparent)",
+                  filter: "blur(8px)",
+                  opacity: 0.55,
                 }}
               />
             </div>
           </div>
 
-          
           <motion.div
             animate={{
               boxShadow: [
-                "0 0 40px 8px rgba(139,92,246,0.22), inset 0 0 34px rgba(0,0,0,0.95)",
-                "0 0 62px 12px rgba(34,211,238,0.3), inset 0 0 34px rgba(0,0,0,0.95)",
-                "0 0 40px 8px rgba(139,92,246,0.22), inset 0 0 34px rgba(0,0,0,0.95)",
+                "0 0 42px 10px rgba(139,92,246,0.22), inset 0 0 36px rgba(0,0,0,1)",
+                "0 0 72px 15px rgba(34,211,238,0.3), inset 0 0 42px rgba(0,0,0,1)",
+                "0 0 42px 10px rgba(139,92,246,0.22), inset 0 0 36px rgba(0,0,0,1)",
               ],
             }}
             transition={{
-              duration: 3,
+              duration: 3.2,
               repeat: Infinity,
               ease: "easeInOut",
             }}
@@ -176,11 +248,10 @@ export function HeroSection() {
               width: "36.5%",
               height: "36.5%",
               background:
-                "radial-gradient(circle at 35% 30%, #0a0a12 0%, #000000 55%, #000000 100%)",
+                "radial-gradient(circle at 38% 30%, #090b12 0%, #010102 42%, #000 72%, #000 100%)",
             }}
           />
 
-          
           <motion.div
             animate={{ rotate: 360 }}
             transition={{
@@ -193,50 +264,72 @@ export function HeroSection() {
               width: "37.4%",
               height: "37.4%",
               background:
-                "conic-gradient(var(--accent), var(--primary), var(--accent), var(--primary), var(--accent))",
-              opacity: 0.85,
-              filter: "blur(0.3px)",
+                "conic-gradient(from 30deg, rgba(255,255,255,0.9), var(--accent), var(--primary), transparent, var(--accent), rgba(255,255,255,0.8))",
+              opacity: 0.95,
+              filter: "blur(0.25px)",
             }}
           >
-            <div
-              className="h-full w-full rounded-full"
-              style={{ background: "#000" }}
-            />
+            <div className="h-full w-full rounded-full bg-black" />
           </motion.div>
 
-         
           <div
             className="absolute z-30 overflow-hidden rounded-full"
             style={{
-              width: "45.7%",
-              height: "5.7%",
-              top: "calc(50% - 22.8%)",
+              width: "47%",
+              height: "6.5%",
+              top: "calc(50% - 24%)",
             }}
           >
             <motion.div
               animate={{ rotate: -360 }}
               transition={{
-                duration: 6,
+                duration: 6.5,
                 repeat: Infinity,
                 ease: "linear",
               }}
-              className="aspect-square"
+              className="aspect-square w-full"
               style={{
-                width: "100%",
-                marginTop: "-43.8%",
+                marginTop: "-43%",
                 borderRadius: "50%",
                 background:
-                  "conic-gradient(from 0deg, transparent, var(--accent), var(--primary), transparent 60%)",
+                  "conic-gradient(from 0deg, transparent 0deg, rgba(255,255,255,0.9) 35deg, var(--accent) 80deg, var(--primary) 145deg, transparent 230deg)",
                 filter: "blur(4px)",
                 opacity: 0.95,
               }}
             />
           </div>
 
+          <div
+            className="absolute z-20 overflow-hidden rounded-full opacity-60"
+            style={{
+              width: "42%",
+              height: "4.5%",
+              bottom: "calc(50% - 23%)",
+              transform: "rotate(180deg)",
+            }}
+          >
+            <motion.div
+              animate={{ rotate: 360 }}
+              transition={{
+                duration: 8,
+                repeat: Infinity,
+                ease: "linear",
+              }}
+              className="aspect-square w-full"
+              style={{
+                marginTop: "-45%",
+                borderRadius: "50%",
+                background:
+                  "conic-gradient(from 180deg, transparent, var(--primary), var(--accent), transparent 60%)",
+                filter: "blur(5px)",
+              }}
+            />
+          </div>
+
           <motion.div
-            animate={{ opacity: [0.75, 1, 0.75] }}
+            animate={{ opacity: [0.72, 1, 0.72] }}
             transition={{
-              duration: 2.2,
+              duration: 2.3,
               repeat: Infinity,
               ease: "easeInOut",
             }}
