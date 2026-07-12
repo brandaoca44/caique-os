@@ -2,7 +2,7 @@
 
 Portfólio pessoal de **Caique Brandão**, Software Engineer, Full Stack Developer e Systems Analyst, construído como se fosse a interface de um sistema operacional, não um site tradicional.
 
-🔗 **Live:** _em breve_
+🔗 **Online: [Digital Identity](https://caique-os.vercel.app),** _em breve_
 📦 **Stack:** Next.js · TypeScript · Tailwind CSS v4 · Motion
 
 ---
@@ -77,8 +77,6 @@ npm run start
 ## Deploy
 
 O projeto é hospedado na [Vercel](https://vercel.com), com deploy automático a cada push na branch `main`.
-
-O Projeto já está no ar, clicando aqui [Digital Identity](https://caique-os.vercel.app), você irá ver ele finalizado.
 
 ## Licença
 
