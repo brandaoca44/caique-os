@@ -2,7 +2,7 @@
 
 Portfólio pessoal de **Caique Brandão**, Software Engineer, Full Stack Developer e Systems Analyst, construído como se fosse a interface de um sistema operacional, não um site tradicional.
 
-🔗 **Online: [Digital Identity](https://caique-os.vercel.app),** _em breve_
+🔗 **Online: [Digital Identity](https://caique-os.vercel.app),**
 📦 **Stack:** Next.js · TypeScript · Tailwind CSS v4 · Motion
 
 ---
