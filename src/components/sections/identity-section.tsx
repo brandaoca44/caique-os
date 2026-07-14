@@ -147,7 +147,7 @@ export function IdentitySection() {
 
                 <div className="mt-2 flex items-center gap-2 text-sm text-[var(--text-primary)]">
                   <MapPin size={15} className="text-[var(--accent)]" />
-                  Salvador, Brazil
+                  Santo Estevão, Brazil
                 </div>
               </div>
 
