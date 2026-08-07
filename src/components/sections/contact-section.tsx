@@ -22,8 +22,8 @@ const contacts = [
   {
     icon: MessageCircle,
     title: "WhatsApp",
-    value: "+55 (75) 99866-5796",
-    href: "https://wa.me/5575998665796",
+    value: "+55 (71) 98236-7350",
+    href: "https://wa.me/5571982367350",
   },
 ];
 
