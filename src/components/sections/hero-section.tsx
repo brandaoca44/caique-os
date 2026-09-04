@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "motion/react";
-import { ArrowRight, Download } from "lucide-react";
+import { Download } from "lucide-react";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 import { LiveRole } from "@/components/ui/live-role";
 
@@ -60,14 +60,6 @@ export function HeroSection() {
           </p>
 
           <div className="mt-10 flex flex-wrap gap-3">
-            <a
-              href="#projects"
-              className="inline-flex items-center gap-2 rounded-lg bg-[var(--primary)] px-5 py-2.5 text-sm font-medium text-white transition hover:brightness-110"
-            >
-              Ver projetos
-              <ArrowRight size={16} />
-            </a>
-
             <a
               href="/documents/caique-brandao-curriculo.pdf"
               className="inline-flex items-center gap-2 rounded-lg border border-[var(--border)] bg-[var(--surface)] px-5 py-2.5 text-sm font-medium backdrop-blur-xl transition hover:border-[var(--border-active)]"
@@ -190,7 +182,7 @@ export function HeroSection() {
                 className="absolute inset-0 rounded-full"
                 style={{
                   background:
-                    "conic-gradient(from 20deg, transparent 0deg, rgba(34,211,238,0.2) 22deg, rgba(255,255,255,0.95) 48deg, var(--accent) 72deg, var(--primary) 135deg, transparent 195deg, rgba(139,92,246,0.7) 254deg, rgba(255,255,255,0.65) 302deg, transparent 360deg)",
+                    "conic-gradient(from 20deg, transparent 0deg, rgba(16,185,129,0.2) 22deg, rgba(255,255,255,0.95) 48deg, var(--accent) 72deg, var(--primary) 135deg, transparent 195deg, rgba(139,92,246,0.7) 254deg, rgba(255,255,255,0.65) 302deg, transparent 360deg)",
                   filter: "blur(2px)",
                   opacity: 0.95,
                 }}
@@ -206,7 +198,7 @@ export function HeroSection() {
                 className="absolute inset-[7%] rounded-full"
                 style={{
                   background:
-                    "conic-gradient(from 180deg, transparent 0deg, rgba(139,92,246,0.8) 45deg, rgba(34,211,238,0.95) 95deg, rgba(255,255,255,0.8) 135deg, transparent 210deg, rgba(139,92,246,0.6) 290deg, transparent 360deg)",
+                    "conic-gradient(from 180deg, transparent 0deg, rgba(139,92,246,0.8) 45deg, rgba(16,185,129,0.95) 95deg, rgba(255,255,255,0.8) 135deg, transparent 210deg, rgba(139,92,246,0.6) 290deg, transparent 360deg)",
                   filter: "blur(5px)",
                   opacity: 0.75,
                 }}
@@ -234,7 +226,7 @@ export function HeroSection() {
             animate={{
               boxShadow: [
                 "0 0 42px 10px rgba(139,92,246,0.22), inset 0 0 36px rgba(0,0,0,1)",
-                "0 0 72px 15px rgba(34,211,238,0.3), inset 0 0 42px rgba(0,0,0,1)",
+                "0 0 72px 15px rgba(16,185,129,0.3), inset 0 0 42px rgba(0,0,0,1)",
                 "0 0 42px 10px rgba(139,92,246,0.22), inset 0 0 36px rgba(0,0,0,1)",
               ],
             }}
