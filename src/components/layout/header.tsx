@@ -5,11 +5,11 @@ import { AnimatePresence, motion } from "motion/react";
 import { Menu, X } from "lucide-react";
 
 const links = [
-  { label: "Identity", href: "#identity" },
-  { label: "Capabilities", href: "#capabilities" },
-  { label: "Projects", href: "#projects" },
-  { label: "AI Lab", href: "#ai-lab" },
-  { label: "Contact", href: "#contact" },
+  { label: "Identity", href: "#identity", index: "01" },
+  { label: "Capabilities", href: "#capabilities", index: "02" },
+  { label: "Projects", href: "#projects", index: "03" },
+  { label: "Lab", href: "#ai-lab", index: "04" },
+  { label: "Contact", href: "#contact", index: "05" },
 ];
 
 export function Header() {
@@ -17,17 +17,17 @@ export function Header() {
 
   return (
     <motion.header
-      initial={{ opacity: 0, y: -16 }}
+      initial={{ opacity: 0, y: -14 }}
       animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.6, delay: 0.2 }}
-      className="fixed left-0 right-0 top-[37px] z-40 border-b border-[var(--border)] bg-[var(--background)]/80 backdrop-blur-xl"
+      transition={{ duration: 0.55 }}
+      className="fixed inset-x-0 top-0 z-50 border-b border-[var(--border)] bg-[var(--background)]/90 backdrop-blur-xl"
     >
-      <div className="mx-auto flex h-16 max-w-7xl items-center justify-between px-6">
+      <div className="mx-auto flex h-16 max-w-[1600px] items-center justify-between px-6 sm:px-10 lg:px-12 xl:px-16">
         <a
           href="#top"
-          className="font-mono text-sm tracking-[0.2em] text-[var(--text-primary)]"
+          className="font-mono text-[11px] uppercase tracking-[0.24em] text-[var(--text-primary)]"
         >
-          CB<span className="text-[var(--accent)]">.</span>
+          CB <span className="text-[var(--accent)]">/</span> SOFTWARE SYSTEMS
         </a>
 
         <nav className="hidden items-center gap-7 md:flex">
@@ -35,8 +35,9 @@ export function Header() {
             <a
               key={link.href}
               href={link.href}
-              className="font-mono text-[11px] tracking-[0.12em] text-[var(--text-secondary)] transition hover:text-[var(--text-primary)]"
+              className="group inline-flex items-center gap-2 font-mono text-[10px] uppercase tracking-[0.18em] text-[var(--text-secondary)] transition hover:text-[var(--text-primary)]"
             >
+              <span className="text-[var(--accent)]">{link.index}</span>
               {link.label}
             </a>
           ))}
@@ -47,7 +48,7 @@ export function Header() {
           onClick={() => setOpen((current) => !current)}
           aria-label={open ? "Close menu" : "Open menu"}
           aria-expanded={open}
-          className="rounded-md border border-[var(--border)] p-2 text-[var(--text-secondary)] transition hover:border-[var(--border-active)] hover:text-white md:hidden"
+          className="border border-[var(--border-strong)] p-2 text-[var(--text-secondary)] md:hidden"
         >
           {open ? <X size={17} /> : <Menu size={17} />}
         </button>
@@ -59,17 +60,18 @@ export function Header() {
             initial={{ height: 0, opacity: 0 }}
             animate={{ height: "auto", opacity: 1 }}
             exit={{ height: 0, opacity: 0 }}
-            transition={{ duration: 0.25 }}
-            className="overflow-hidden border-t border-[var(--border)] bg-[var(--background)]/95 md:hidden"
+            transition={{ duration: 0.2 }}
+            className="overflow-hidden border-t border-[var(--border)] bg-[var(--background)] md:hidden"
           >
-            <div className="flex flex-col gap-1 px-6 py-4">
+            <div className="flex flex-col px-6 py-4">
               {links.map((link) => (
                 <a
                   key={link.href}
                   href={link.href}
                   onClick={() => setOpen(false)}
-                  className="rounded-md px-2 py-2.5 font-mono text-[12px] tracking-[0.1em] text-[var(--text-secondary)] transition hover:bg-[var(--surface)] hover:text-white"
+                  className="flex items-center gap-3 border-b border-[var(--border)] py-3 font-mono text-[11px] uppercase tracking-[0.16em] text-[var(--text-secondary)]"
                 >
+                  <span className="text-[var(--accent)]">{link.index}</span>
                   {link.label}
                 </a>
               ))}

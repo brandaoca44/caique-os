@@ -23,26 +23,26 @@ export function LiveRole() {
   }, []);
 
   return (
-    <div
-      className="mt-5 flex h-6 items-center font-mono text-[13px] tracking-[0.08em]"
-      aria-live="polite"
-    >
-      <span className="mr-3 text-[var(--text-muted)]">&gt;</span>
+    <div className="mt-10 flex items-center gap-4">
+      <span className="h-px w-10 bg-[var(--accent)]" />
+      <span className="font-mono text-[10px] tracking-[0.22em] text-[var(--text-muted)]">
+        01
+      </span>
 
       <AnimatePresence mode="wait">
         <motion.span
           key={roles[currentRole]}
-          initial={{ opacity: 0, y: 8, filter: "blur(4px)" }}
-          animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
-          exit={{ opacity: 0, y: -8, filter: "blur(4px)" }}
-          transition={{ duration: 0.35 }}
-          className="text-[var(--text-primary)]"
+          initial={{ opacity: 0, y: 6 }}
+          animate={{ opacity: 1, y: 0 }}
+          exit={{ opacity: 0, y: -6 }}
+          transition={{ duration: 0.25 }}
+          className="text-base font-semibold text-[var(--text-primary)] sm:text-lg"
         >
           {roles[currentRole]}
         </motion.span>
       </AnimatePresence>
 
-      <span className="ml-1 animate-pulse text-[var(--accent)]">_</span>
+      <span className="h-4 w-px bg-[var(--accent)]" />
     </div>
   );
 }
