@@ -22,7 +22,7 @@ const projects = [
       "Social network with authentication, posts, media upload, notifications, moderation and scalable backend architecture.",
     stack: ["React", "NestJS", "Prisma", "Cloudflare R2"],
     status: "IN DEVELOPMENT",
-    github: "https://github.com/brandaoca44/moment-backend",
+    github: "https://github.com/brandaoca44/moment-frontend",
     deploy: "#",
   },
   {
